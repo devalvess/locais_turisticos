@@ -11,3 +11,4 @@ Route::post('/places/store', [PlaceController::class, 'store']);
 Route::get('/places/show/{id}', [PlaceController::class, 'show']);
 Route::get('/places/edit/{id}', [PlaceController::class, 'edit']);
 Route::post('/update/{id}', [PlaceController::class, 'update']);
+Route::post('/destroy/{id}',[PlaceController::class, 'destroy']);

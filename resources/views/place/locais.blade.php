@@ -17,8 +17,8 @@
 
             <a href="/places/show/{{ $item->id }}">
                 {{$item->name}}; 
-                {{$item->description}}
-                {{$item->address}}
+                {{$item->description}};
+                {{$item->address}};
             </a>
 
         </li>

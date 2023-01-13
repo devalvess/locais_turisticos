@@ -56,11 +56,20 @@ class PlaceController extends Controller
             [
                 'name'=> $request->name,
                 'description'=> $request->description,
-                'address'=> $request->adrress
+                'address'=> $request->address
             ]
             );
 
             return redirect('/places/show/' . $id);
+    }
+
+    public function destroy($id) 
+    {
+        $place = Place::find($id);
+
+        $place->delete();
+
+        return redirect('/places');
     }
 
 }
