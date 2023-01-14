@@ -7,25 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Local</h1>
+    <h1>Locais</h1>
     <a href="/places/create">Criar Local</a>
 
-    <ul>
-        @foreach($place as $item)
-
-        <li>
-
-            <a href="/places/show/{{ $item->id }}">
-                {{$item->name}}; 
-                {{$item->description}};
-                {{$item->address}};
-            </a>
-
-        </li>
-        @endforeach
-    </ul>
-
     <hr>
-    <a href="">Praça Central</a>
+
+   
+    @foreach($place as $item)
+
+         <a href="/places/show/{{ $item->id }}">
+            {{$item->name}} <br>
+        </a>
+
+    @endforeach
+    
+
 </body>
 </html>

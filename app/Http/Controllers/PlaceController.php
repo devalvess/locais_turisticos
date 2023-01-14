@@ -63,7 +63,7 @@ class PlaceController extends Controller
             return redirect('/places/show/' . $id);
     }
 
-    public function destroy($id) 
+    public function delete($id) 
     {
         $place = Place::find($id);
 

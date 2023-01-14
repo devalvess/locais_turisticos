@@ -9,13 +9,15 @@
 <body>
     <h1>Editar Local</h1>
     
-    <form action="/update/{{ $place->id }}" method="POST">
+    <form action="/places/update/{{ $place->id }}" method="POST">
         @csrf
-        <input  name="name" value="{{ $place->name }}">
-        <input  name="description" value="{{ $place->description }}">
+        <input type="text"  name="name" value="{{ $place->name }}">
+        <input type="text"  name="description" value="{{ $place->description }}">
         <input type="text" required name="address" value="{{ $place->address }}">
         <button type="submit">Enviar</button>
     </form>
+
+   <a href="/places/delete/{{ $place->id }}">Delete</a>
 
 </body>
 </html>

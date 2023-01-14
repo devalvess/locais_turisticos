@@ -7,18 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Local</h1>
     <ul>
         <li>Nome:{{ $place->name }}</li>
         <li>Descrição:{{ $place->description }}</li>
         <li>Local:{{ $place->address }}</li>
-        <a href="/places/edit/{{ $place->id }}">Editar</a>
     </ul>
-
-    <form action="/destroy/{{ $place->id }}" method="POST">
-        @csrf
-        <button type="submit">Deletar</button>
-    </form>   
-
+    <a href="/places/edit/{{ $place->id }}">Editar</a>
 
 </body>
 </html>
